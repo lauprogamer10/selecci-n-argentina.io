@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: lightskyblue;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        section {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: lightskyblue;
+            color: #fff;
+        }
+
+        .content {
+            display: none; /* Oculto por defecto */
+        }
+
+        button.toggle-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        button.toggle-button img {
+            width: 30px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+        }
+    </style>
+
+    <title>Selección Argentina de Fútbol</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="imagenes/descargar.jpg" alt="logo-argentina" style="width: 50px; vertical-align: middle; margin-right: 10px;">
+            Selección Argentina de Fútbol
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#leyendas">Leyendas</a></li>
+                <li><a href="#titulos">Títulos</a></li>
+                <li><a href="#jugadores">Jugadores Actuales</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="historia">
+        <h2>Historia</h2>
+        <button class="toggle-button" onclick="toggleContent('content-historia')">
+            <img src="imagenes/copa.png" alt="Mostrar/Ocultar">
+        </button>
+        <div id="content-historia" class="content">
+            <p>
+                Historia de la Selección Argentina de Fútbol y la AFA
+            </p>
+            <p>
+                <strong>Fundación y Primeros Años:</strong> La Asociación del Fútbol Argentino (AFA) fue fundada el 21 de febrero de 1893, convirtiéndose en una de las primeras federaciones de fútbol en el mundo.
+                <button class="toggle-button" onclick="toggleContent('fundacion')">Leer más</button>
+                <div id="fundacion" class="content" style="display: none;">
+                    La selección argentina jugó su primer partido oficial el 20 de junio de 1902 contra Uruguay, marcando el inicio de una rica tradición futbolística.
+                </div>
+            </p>
+            <p>
+                <strong>Éxitos Internacionales:</strong> A lo largo de los años, Argentina ha cosechado numerosos logros. En 1913, el equipo ganó su primer título internacional en la Copa América.
+                <button class="toggle-button" onclick="toggleContent('exitos')">Leer más</button>
+                <div id="exitos" class="content" style="display: none;">
+                    Desde entonces, se ha consagrado como uno de los equipos más exitosos de América del Sur, ganando la Copa América en múltiples ocasiones (en 16 oportunidades hasta 2024).
+                    <br>El primer gran logro a nivel mundial llegó en 1930, cuando Argentina fue el país anfitrión de la primera Copa del Mundo. El equipo llegó a la final, pero perdió ante Uruguay.
+                </div>
+            </p>
+            <p>
+                <strong>Victorias Clave:</strong> Sin embargo, la victoria llegó en 1978, cuando Argentina se coronó campeona en casa, y nuevamente en 1986, bajo la capitanía de Diego Maradona, donde se destacó con su legendaria actuación.
+                <button class="toggle-button" onclick="toggleContent('victorias')">Leer más</button>
+                <div id="victorias" class="content" style="display: none;">
+                    Sin olvidar el más reciente en 2022 donde Messi consiguió el tercer título mundial.
+                </div>
+            </p>
+            <p>
+                <strong>Iconos del Fútbol:</strong> A lo largo de su historia, Argentina ha producido algunos de los mejores futbolistas del mundo. Desde Diego Maradona y su “Mano de Dios” hasta Lionel Messi, el fútbol argentino ha brillado en el escenario internacional.
+                <button class="toggle-button" onclick="toggleContent('iconos')">Leer más</button>
+                <div id="iconos" class="content" style="display: none;">
+                    Messi, en particular, ha llevado al equipo a nuevas alturas, ganando la Copa América 2021, 2024 haciendo nos bicampeones y el Mundial de 2022 en Catar.
+                </div>
+            </p>
+            <p>
+                <strong>AFA y su Evolución:</strong> La AFA ha evolucionado con el tiempo, adaptándose a los cambios en el fútbol mundial y gestionando tanto la selección masculina como la femenina, que ha crecido significativamente en popularidad y éxito en los últimos años.
+                <button class="toggle-button" onclick="toggleContent('afa')">Leer más</button>
+                <div id="afa" class="content" style="display: none;">
+                    La AFA también ha trabajado en el desarrollo de jóvenes talentos a través de sus academias y ligas menores.
+                </div>
+            </p>
+            <p>
+                <strong>El Futuro del Fútbol Argentino:</strong> Con un sólido enfoque en el desarrollo juvenil y la infraestructura, la AFA continúa buscando elevar el nivel del fútbol argentino.
+                <button class="toggle-button" onclick="toggleContent('futuro')">Leer más</button>
+                <div id="futuro" class="content" style="display: none;">
+                    La selección, con un plantel talentoso y experimentado, tiene grandes expectativas en futuras competiciones internacionales.
+                </div>
+            </p>
+        </div>
+    </section>
+
+    <section id="leyendas">
+        <h2>Leyendas</h2>
+        <button class="toggle-button" onclick="toggleContent('content-leyendas')">
+            <img src="imagenes/copa.png" alt="Mostrar/Ocultar">
+        </button>
+        <div id="content-leyendas" class="content">
+            <p>La historia de Argentina está marcada por figuras icónicas como:</p>
+            <ul>
+                <li><strong>Diego Maradona:</strong> Considerado uno de los mejores futbolistas de todos los tiempos, lideró a Argentina a la victoria en la Copa del Mundo de 1986 con actuaciones memorables.</li>
+                <li><strong>Lionel Messi:</strong> Ganador de múltiples Balones de Oro, Messi es el máximo goleador histórico de la selección y ha sido clave en su éxito reciente, incluyendo la Copa América 2021, 2024 y la copa del mundo de 2022.</li>
+                <li><strong>Gabriel Batistuta:</strong> Conocido por su potente disparo, Batistuta es uno de los máximos goleadores de la historia de la selección.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="titulos">
+        <h2>Títulos</h2>
+        <button class="toggle-button" onclick="toggleContent('content-titulos')">
+            <img src="imagenes/copa.png" alt="Mostrar/Ocultar">
+        </button>
+        <div id="content-titulos" class="content">
+            <p>Argentina ha cosechado numerosos títulos a lo largo de su historia</p>
+            <ul>
+                <li><strong>Copa del Mundo:</strong> 1978, 1986, 2022</li>
+                <li><strong>Copa América:</strong> 16 veces, siendo la más reciente en 2024, así convirtiéndonos en bicampeones.</li>
+                <li><strong>Medalla de Oro en los Juegos Olímpicos:</strong> 2004, 2008</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="jugadores">
+        <h2>Jugadores Actuales</h2>
+        <button class="toggle-button" onclick="toggleContent('content-jugadores')">
+            <img src="imagenes/copa.png" alt="Mostrar/Ocultar">
+        </button>
+        <div id="content-jugadores" class="content">
+            <p>En la actualidad, la selección cuenta con una mezcla de experiencia y juventud...</p>
+            <ul>
+                <li><strong>Lionel Messi:</strong> El capitán del equipo, considerado uno de los mejores de la historia.</li>
+                <li><strong>Lautaro Martínez:</strong> Delantero destacado en el Inter de Milán, clave en el ataque argentino.</li>
+                <li><strong>Ángel Di María:</strong> Experiencia y habilidad en el mediocampo, fundamental en el juego ofensivo.</li>
+                <li><strong>Julián Álvarez:</strong> Joven promesa que ha brillado en el Manchester City, aportando velocidad y goles.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Selección Argentina de Fútbol Gustavo , Laureano, Leandro y Carlos . Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            }
+        </script>
+</body>
+</html>
